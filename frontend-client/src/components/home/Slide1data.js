@@ -1,5 +1,6 @@
 
 
+
 const dealData = [
     { 
         id: 'product1',
@@ -57,4 +58,4 @@ const dealData = [
     }
 ];
 
-export default dealData; // Corrected export statement
+export default dealData; 

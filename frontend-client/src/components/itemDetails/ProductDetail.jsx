@@ -1,18 +1,18 @@
-
 import React, { useEffect, useState, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Box, Typography, Button, CircularProgress, CardMedia, Grid, Divider, Paper } from '@mui/material';
 
 const ProductDetail = () => {
-    const { id } = useParams();
-    const navigate = useNavigate(); // Initialize navigate
-    const [product, setProduct] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const { id } = useParams(); // Extract product ID from the URL
+    const navigate = useNavigate(); // Initialize navigate to redirect users
+    const [product, setProduct] = useState(null); // Holds product details
+    const [loading, setLoading] = useState(true); // Loading state
+    const [error, setError] = useState(null); // Error state
 
+    // Fetch product details based on product ID
     const fetchProduct = useCallback(async () => {
         try {
-            const response = await fetch(`http://localhost:8080/product/${id}`);
+            const response = await fetch(`http://localhost:8080/products/${id}`);
             if (!response.ok) {
                 if (response.status === 404) {
                     throw new Error('Product not found.');
@@ -20,30 +20,34 @@ const ProductDetail = () => {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
             }
-            const data = await response.json();
-            setProduct(data);
+            const data = await response.json(); // Parse the JSON response
+            setProduct(data); // Set product details to state
         } catch (error) {
             console.error('Error fetching product:', error.message);
-            setError(error.message);
+            setError(error.message); // Set error message if any
         } finally {
-            setLoading(false);
+            setLoading(false); // Set loading state to false
         }
     }, [id]);
 
+    // Use useEffect to fetch product data when the component mounts
     useEffect(() => {
         fetchProduct();
     }, [fetchProduct]);
 
+    // Function to handle adding product to the cart
     const handleAddToCart = async () => {
-        if (!product) return;
+        if (!product) return; // Prevent adding to cart if product doesn't exist
+
         try {
             const cartItem = {
                 id: product.id, // Product ID
-                price: product.price.cost,
-                image: product.detailUrl || product.url || '/path/to/fallback-image.jpg',
-                quantity: 1, // Default quantity
+                price: product.price.cost, // Product price
+                image: product.detailUrl || product.url || '/path/to/fallback-image.jpg', // Product image
+                quantity: 1, // Default quantity for cart
             };
 
+            // Make a POST request to add the item to the cart
             const response = await fetch('http://localhost:8080/cart', {
                 method: 'POST',
                 headers: {
@@ -56,16 +60,16 @@ const ProductDetail = () => {
                 throw new Error(`Error adding to cart: ${response.statusText}`);
             }
 
-            // If the product is successfully added to the cart, navigate to the cart page
+            // If successful, navigate to the cart page
             console.log('Product added to cart:', cartItem);
-            navigate('/cart'); // Redirect to the cart page
+            navigate('/cart');
 
         } catch (error) {
             console.error('Error adding product to cart:', error.message);
         }
     };
 
-    // Loading state
+    // Render loading state
     if (loading) {
         return (
             <Box display="flex" justifyContent="center" alignItems="center" minHeight="50vh">
@@ -74,7 +78,7 @@ const ProductDetail = () => {
         );
     }
 
-    // Error state
+    // Render error state
     if (error) {
         return (
             <Typography color="error" align="center" sx={{ mt: 4 }}>
@@ -83,7 +87,7 @@ const ProductDetail = () => {
         );
     }
 
-    // No product found
+    // Render if no product found
     if (!product) {
         return (
             <Typography align="center" sx={{ mt: 4 }}>
@@ -96,7 +100,7 @@ const ProductDetail = () => {
         <Box sx={{ maxWidth: 870, mx: 'auto', p: 3 }}>
             <Paper elevation={3} sx={{ p: 3 }}>
                 <Grid container spacing={4}>
-                    {/* Product Image and Buttons */}
+                    {/* Product Image and Action Buttons */}
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <CardMedia
                             component="img"
@@ -110,9 +114,9 @@ const ProductDetail = () => {
                                     variant="contained"
                                     color="warning"
                                     fullWidth
-                                    disabled={!product?.stock}
+                                    disabled={!product?.stock} // Disable if product is out of stock
                                     sx={{ py: 1, mb: 1 }}
-                                    onClick={handleAddToCart} // Call the function on button click
+                                    onClick={handleAddToCart} // Add to cart handler
                                 >
                                     Add to Cart
                                 </Button>
@@ -122,7 +126,7 @@ const ProductDetail = () => {
                                     variant="contained"
                                     color="warning"
                                     fullWidth
-                                    disabled={!product?.stock}
+                                    disabled={!product?.stock} // Disable if out of stock
                                     sx={{ py: 1 }}
                                 >
                                     Buy Now
@@ -144,15 +148,13 @@ const ProductDetail = () => {
                         <Divider sx={{ my: 2 }} />
 
                         <Grid container spacing={2}>
-                            {/* Price */}
+                            {/* Price and MRP */}
                             <Grid item xs={6}>
                                 <Typography variant="body2" color="textPrimary">Price:</Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
                                     ₹{product?.price?.cost || 'N/A'}
                                 </Typography>
                             </Grid>
-
-                            {/* MRP */}
                             <Grid item xs={6}>
                                 <Typography variant="body2" color="textPrimary">MRP:</Typography>
                                 <Typography variant="body2" sx={{ textDecoration: 'line-through' }}>

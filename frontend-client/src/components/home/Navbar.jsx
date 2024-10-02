@@ -1,3 +1,4 @@
+
 import {
   Box,
   styled,
@@ -196,11 +197,7 @@ export const navData = [
       "Bookshelf",
       "Desk",
       "Office Chair",
-      "Wardrobe",
-      "Cabinet",
-      "Recliner",
-      "Console Table",
-      "Ottoman",
+      
     ],
   },
   {
@@ -218,10 +215,7 @@ export const navData = [
       "Toaster",
       "Coffee Maker",
       "Air Conditioner",
-      "Heater",
-      "Vacuum Cleaner",
-      "Food Processor",
-      "Rice Cooker",
+      
     ],
   },
   {
@@ -235,15 +229,11 @@ export const navData = [
       "Airplane",
       "Bicycle",
       "Motorcycle",
-      "Walking",
+      
       "Boat",
       "Cruise Ship",
       "Tram",
-      "Subway",
-      "Taxi",
-      "Ride-Sharing Services",
-      "Hot Air Balloon",
-      "Segway",
+     
     ],
   },
   {
@@ -261,10 +251,7 @@ export const navData = [
       "Puzzle Games",
       "Stuffed Animals",
       "RC Cars and Drones",
-      "Educational Toys",
-      "Dolls",
-      "Musical Instruments",
-      "Art Supplies",
+      
     ],
   },
 ];

@@ -1,8 +1,9 @@
+
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv'; 
-import { insertDefaultData } from './controller/product-controller.js';
+//import { insertDefaultData } from './controller/product-controller.js';
 import router from './routes/route.js';
 
 
@@ -21,11 +22,11 @@ app.use('/', router);
 
 
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("MongoDB connected");
     try {
-      insertDefaultData();
+      //insertDefaultData();
     } catch (error) {
       console.error("Error inserting default data:", error.message);
     }

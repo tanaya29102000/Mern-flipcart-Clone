@@ -1,3 +1,4 @@
+
 import express from "express";
 import {userSignUp, userLogIn } from "../controller/user-controller.js";
 
@@ -14,7 +15,7 @@ router.post("/login", userLogIn);
 router.post("/signup", userSignUp);
 
 router.get("/products", getAllProducts);
-router.get("/product/:id", getProductById);
+router.get("/products/:id", getProductById);
 
 router.post('/cart', addToCart); 
 router.get('/cart', getCartItems); 

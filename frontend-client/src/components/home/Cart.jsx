@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import {
     Box,
@@ -170,7 +171,7 @@ const Cart = () => {
                                 />
                             </Box>
 
-                            {/* Details Section */}
+                         
                             <Box sx={{ width: '40%', display: 'flex', flexDirection: 'column', marginTop:'20px'}}>
                                 <Box>
                                     <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
@@ -181,7 +182,7 @@ const Cart = () => {
                                     </Typography>
                                 </Box>
 
-                                {/* Quantity and buttons section */}
+                              
                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '150px', mt: 1, mb: 1 }}>
                                     <Button variant="outlined" color="primary" onClick={() => handleDecrease(item._id)} disabled={item.quantity <= 1}>
                                         -
@@ -192,7 +193,7 @@ const Cart = () => {
                                     </Button>
                                 </Box>
 
-                                {/* Actions: Delete and Buy Now */}
+                               
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: "20px",color:"red" }}>
                                     <OrangeButton
                                         variant="outlined"
@@ -215,8 +216,7 @@ const Cart = () => {
                     ))}
                 </Grid>
 
-                {/* Right Side: Price Details */}
-                <Grid item xs={12} md={4} sx={{ flex: 1.15,marginTop:'55px' }}> {/* Increase size by 15% */}
+                <Grid item xs={12} md={4} sx={{ flex: 1.15,marginTop:'55px' }}> 
                     <Header>
                         <Heading sx={{color:"black",fontSize:"200",alignContent:"center"}}>PRICE DETAILS</Heading>
                     </Header>

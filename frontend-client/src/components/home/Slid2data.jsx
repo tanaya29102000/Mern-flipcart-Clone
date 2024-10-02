@@ -1,3 +1,4 @@
+
 export const furnitureData = [
     { 
         url: 'https://rukminim1.flixcart.com/image/300/300/ke7ff680/hammock-swing/j/f/u/q3-jkaf-y3l0-furniture-kart-original-imafux96kpy7grch.jpeg?q=70', 

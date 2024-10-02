@@ -1,3 +1,4 @@
+
 import { styled } from '@mui/material';
 import React from 'react';
 import Carousel from "react-multi-carousel";
@@ -6,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 
 const Image = styled('img')({
     width: '100%',
-    height: '280px', // Use 'px' or other units
+    height: '280px', 
   });
 const responsive = {
   desktop: {
