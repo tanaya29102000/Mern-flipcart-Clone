@@ -12,7 +12,7 @@ const ProductDetail = () => {
     // Fetch product details based on product ID
     const fetchProduct = useCallback(async () => {
         try {
-            const response = await fetch(`http://localhost:8080/products/${id}`);
+            const response = await fetch(`https://mern-flipcart-clone-jo6r.vercel.app/products/${id}`);
             if (!response.ok) {
                 if (response.status === 404) {
                     throw new Error('Product not found.');
@@ -48,7 +48,7 @@ const ProductDetail = () => {
             };
 
             // Make a POST request to add the item to the cart
-            const response = await fetch('http://localhost:8080/cart', {
+            const response = await fetch('https://mern-flipcart-clone-jo6r.vercel.app/cart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -73,7 +73,7 @@ const Slide = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('http://localhost:8080/products');  // Replace with your API endpoint
+                const response = await fetch('https://mern-flipcart-clone-jo6r.vercel.app/products');  // Replace with your API endpoint
                 if (!response.ok) {
                     throw new Error('Failed to fetch products');
                 }

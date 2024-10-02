@@ -60,7 +60,7 @@ const Cart = () => {
 
     const fetchCartItems = async () => {
         try {
-            const response = await fetch('http://localhost:8080/cart');
+            const response = await fetch('https://mern-flipcart-clone-jo6r.vercel.app/cart');
             if (!response.ok) {
                 throw new Error('Failed to fetch cart items.');
             }
@@ -99,7 +99,7 @@ const Cart = () => {
 
     const handleDelete = async (itemId) => {
         try {
-            await fetch(`http://localhost:8080/cart/${itemId}`, { method: 'DELETE' });
+            await fetch(`https://mern-flipcart-clone-jo6r.vercel.app/cart/${itemId}`, { method: 'DELETE' });
             setCartItems((prevItems) =>
                 prevItems.filter((item) => item._id !== itemId)
             );
