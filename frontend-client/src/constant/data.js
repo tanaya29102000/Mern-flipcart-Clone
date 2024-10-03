@@ -280,5 +280,152 @@ export const furnitureData = [
         rating: 4.5,
         stock: true,
         category: 'Audio & Headphones'
-    } 
+    } ,
+    { 
+        id: 'product1',
+        url: 'https://rukminim1.flixcart.com/image/150/150/k1f3rrk0/television/d/q/p/nu-32b3w-2021-oneplus-original-imaftf9q8bqzg3gf.jpeg?q=70',
+        detailUrl: 'https://rukminim1.flixcart.com/image/416/416/k1f3rrk0/television/d/q/p/nu-32b3w-2021-oneplus-original-imaftf9q8bqzg3gf.jpeg?q=70', 
+        title: {
+            shortTitle: 'Smart TV',
+            longTitle: 'OnePlus 32 inches HD Ready Smart LED TV'
+        }, 
+        price: {
+            mrp: 22999,
+            cost: 14999,
+            discount: '35%'
+        },
+        quantity: 1,
+        description: 'Experience stunning visuals and immersive sound with the OnePlus Smart LED TV featuring HDR support.',
+        discount: 'Limited time offer!', 
+        tagline: 'Catch the action!',
+        rating: 4.2,
+        stock: true,
+        category: 'Electronics & Appliances'
+    },
+    { 
+        id: 'product2',
+        url: 'https://rukminim1.flixcart.com/image/150/150/k3ybk280/t-shirt/y/m/q/6182954-green-xxl-bink021-original-imaftfgyhj6zfsze.jpeg?q=70',
+        detailUrl: 'https://rukminim1.flixcart.com/image/416/416/k3ybk280/t-shirt/y/m/q/6182954-green-xxl-bink021-original-imaftfgyhj6zfsze.jpeg?q=70', 
+        title: {
+            shortTitle: 'T-Shirt',
+            longTitle: 'Bink Men Green T-Shirt'
+        }, 
+        price: {
+            mrp: 999,
+            cost: 499,
+            discount: '50%'
+        },
+        quantity: 1,
+        description: 'Stay comfortable and stylish with this trendy Bink Men Green T-Shirt, perfect for casual outings.',
+        discount: 'Exclusive Offer!', 
+        tagline: 'Fashion on a budget!',
+        rating: 4.0,
+        stock: true,
+        category: 'Apparel'
+    },
+    { 
+        id: 'product3',
+        url: 'https://rukminim1.flixcart.com/image/150/150/k1z4scw0/laptop/n/x/e/lenovo-ideapad-s145-laptop-original-imaftfz2n5fzzf5g.jpeg?q=70',
+        detailUrl: 'https://rukminim1.flixcart.com/image/416/416/k1z4scw0/laptop/n/x/e/lenovo-ideapad-s145-laptop-original-imaftfz2n5fzzf5g.jpeg?q=70', 
+        title: {
+            shortTitle: 'Laptop',
+            longTitle: 'Lenovo Ideapad S145 Laptop'
+        }, 
+        price: {
+            mrp: 47990,
+            cost: 34990,
+            discount: '27%'
+        },
+        quantity: 1,
+        description: 'Powerful performance with sleek design, the Lenovo Ideapad S145 is ideal for both work and play.',
+        discount: 'Grab the Deal!', 
+        tagline: 'Upgrade your productivity!',
+        rating: 4.5,
+        stock: true,
+        category: 'Computers & Accessories'
+    },
+    { 
+        id: 'product4',
+        url: 'https://rukminim1.flixcart.com/image/150/150/k0l1y4w0/smartwatch/r/q/p/huami-amazfit-gts-2-mini-1-55-inch-amazfit-original-imaftzjyfr7brwfd.jpeg?q=70',
+        detailUrl: 'https://rukminim1.flixcart.com/image/416/416/k0l1y4w0/smartwatch/r/q/p/huami-amazfit-gts-2-mini-1-55-inch-amazfit-original-imaftzjyfr7brwfd.jpeg?q=70', 
+        title: {
+            shortTitle: 'Smartwatch',
+            longTitle: 'Amazfit GTS 2 Mini Smartwatch'
+        }, 
+        price: {
+            mrp: 10999,
+            cost: 6499,
+            discount: '41%'
+        },
+        quantity: 1,
+        description: 'Track your health and stay connected with the Amazfit GTS 2 Mini Smartwatch, featuring fitness tracking and notifications.',
+        discount: 'Hot Sale!', 
+        tagline: 'Stay fit and stylish!',
+        rating: 4.3,
+        stock: true,
+        category: 'Wearable Technology'
+    },
+    { 
+        id: 'product5',
+        url: 'https://rukminim1.flixcart.com/image/150/150/k3n5w280/earphone/3/n/u/boAt-aavante-barrier-non-voip-boAt-original-imaftfjdmpzgqj9g.jpeg?q=70',
+        detailUrl: 'https://rukminim1.flixcart.com/image/416/416/k3n5w280/earphone/3/n/u/boAt-aavante-barrier-non-voip-boAt-original-imaftfjdmpzgqj9g.jpeg?q=70', 
+        title: {
+            shortTitle: 'Earphones',
+            longTitle: 'boAt Aavante Barrier Non-VoIP Earphones'
+        }, 
+        price: {
+            mrp: 1499,
+            cost: 899,
+            discount: '40%'
+        },
+        quantity: 1,
+        description: 'Immerse yourself in sound with boAt Aavante Barrier Non-VoIP Earphones, designed for quality audio and comfort.',
+        discount: 'Limited Stock!', 
+        tagline: 'Don\'t miss out!',
+        rating: 4.6,
+        stock: true,
+        category: 'Audio & Headphones'
+    },
+    { 
+        id: 'product6',
+        url: 'https://rukminim1.flixcart.com/image/150/150/kb4e4cw0/men-outerwear/x/r/c/1p703-white-3-hyannis-original-imaft6f2ffgdvmbz.jpeg?q=70',
+        detailUrl: 'https://rukminim1.flixcart.com/image/416/416/kb4e4cw0/men-outerwear/x/r/c/1p703-white-3-hyannis-original-imaft6f2ffgdvmbz.jpeg?q=70', 
+        title: {
+            shortTitle: 'Jacket',
+            longTitle: 'Hyannis Men White Jacket'
+        }, 
+        price: {
+            mrp: 2999,
+            cost: 1599,
+            discount: '47%'
+        },
+        quantity: 1,
+        description: 'Stay warm and stylish with the Hyannis Men White Jacket, perfect for chilly evenings.',
+        discount: 'Seasonal Sale!', 
+        tagline: 'Grab it before it’s gone!',
+        rating: 4.1,
+        stock: true,
+        category: 'Apparel'
+    },
+    { 
+        id: 'product7',
+        url: 'https://rukminim1.flixcart.com/image/150/150/k3s8l4w0/smartphone/x/c/a/mi-11i-128gb-xiaomi-original-imaftz3w9kbgfsfa.jpeg?q=70',
+        detailUrl: 'https://rukminim1.flixcart.com/image/416/416/k3s8l4w0/smartphone/x/c/a/mi-11i-128gb-xiaomi-original-imaftz3w9kbgfsfa.jpeg?q=70', 
+        title: {
+            shortTitle: 'Smartphone',
+            longTitle: 'Xiaomi Mi 11i (128GB) Smartphone'
+        }, 
+        price: {
+            mrp: 29999,
+            cost: 22999,
+            discount: '23%'
+        },
+        quantity: 1,
+        description: 'Experience flagship performance with the Xiaomi Mi 11i, equipped with a powerful processor and stunning display.',
+        discount: 'Best Seller!', 
+        tagline: 'Upgrade your smartphone!',
+        rating: 4.4,
+        stock: true,
+        category: 'Mobiles & Accessories'
+    }
 ];
